@@ -1,5 +1,6 @@
-export const App = () => {
-  return (
+import React, { Components } from 'react';
+class App extends Components {
+   on() {return (
     <div
       style={{
         height: '100vh',
@@ -12,5 +13,6 @@ export const App = () => {
     >
       React homework template
     </div>
-  );
+  );}
+  
 };
