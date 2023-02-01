@@ -1,10 +1,10 @@
 // import PropTypes from "prop-types";
 import React, { Component } from 'react';
 import { FeedBackStyle } from './FeedBack.styled';
-import { FeedbackOptions } from './FeedbackOptions';
-import { Statistic } from './Statistic';
-import { Section } from './Section';
-import { Notification } from './Notification';
+import { FeedbackOptions } from '../FeedBackOptions/FeedbackOptions';
+import { Statistic } from '../Statistic/Statistic';
+import { Section } from '../Section/Section';
+import { Notification } from '../Notification/Notification';
 
 export class FeedBackList extends Component {
   state = {
@@ -44,12 +44,13 @@ export class FeedBackList extends Component {
   render() {
     const oneFeedback = this.countTotalFeedback() <= 0;
     const { good, neutral, bad } = this.state;
+    const options = Object.keys(this.state);
 
     return (
       <FeedBackStyle>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={this.state}
+            options={options}
             onLeaveFeedback={this.onLeaveFeedbacks}
           />
         </Section>

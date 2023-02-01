@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FeedBackList } from './feedback/FeedBack';
+import { FeedBackList } from './feedback/FeedBack/FeedBack';
 
 export class App extends Component {
   state = {
